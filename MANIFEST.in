@@ -1,0 +1,9 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include temple *
+recursive-include core *
+recursive-include builder *
+recursive-include internal *
+recursive-include externals *
+recursive-include services *

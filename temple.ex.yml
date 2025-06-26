@@ -1,0 +1,35 @@
+name: <project_name>
+
+build:
+  env: <path>
+  docker-compose: <path> 
+  gitignore: <path>
+  hermes: <path> 
+  nginx: <path>
+
+  add:
+    - ssl
+
+workspaces:
+  <workspace_name>:
+    workspace: <workspace_type>
+    field: <frontend/backend/multipurpose/package/configs>
+    
+    env: <path>
+    dockerfile: <path>
+
+    build:
+      - requirements: <path>
+      - env: <path>
+      - hermes: <path>
+      - dockerfile: <path>
+      - documentation: <path>
+
+    add:
+      - <modules> # JWT, OAuth, Sockets, Postgre, Mongo, Redis
+
+    interpreter:
+      - hooks: <source>
+      - ...
+
+
