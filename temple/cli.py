@@ -1,7 +1,7 @@
 import click
 from temple import __version__
 
-from temple.cli_cmds.info import version, list_workspaces, about
+from temple.cli_cmds.info import version, list, about
 from temple.cli_cmds.cmds import install, cmd, run
 from temple.cli_cmds.workspace import init, init_workspace, build
 from temple.cli_cmds.virtual_env import prompt, virtualize, add_workpace, add_module
@@ -14,8 +14,8 @@ def cli():
 
 # Info commands
 cli.add_command(version)
-cli.add_command(list_workspaces)
-# cli.add_command(about)
+cli.add_command(list)
+cli.add_command(about)
 
 # Workspace commands
 cli.add_command(init)

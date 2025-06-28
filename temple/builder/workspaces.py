@@ -6,7 +6,7 @@ from temple.builder.configs import TempleConfig
 from temple.builder.package import WorkspacePackage
 from temple.internal.files import file_append, file_insert, file_post, get_filenames, file_create
 from temple.internal.runner import run_local
-from temple.internal.edition import replace_path_variables, replace_variables
+from temple.internal.edition import replace_variables
 
 def run_build(workspace_name: str, workspace_type: str, module: str):
     click.echo(f"Running {workspace_type} {module} build for the {workspace_name} workspace...")

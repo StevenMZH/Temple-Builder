@@ -32,7 +32,6 @@ class WorkspacePackage:
         modules_path = os.path.join(workspaces_packages, self.workspace_type, "modules")
         if not os.path.isdir(modules_path):
             return []
-        # List only directories (modules)
         return [d for d in os.listdir(modules_path) if os.path.isdir(os.path.join(modules_path, d))]
 
         
